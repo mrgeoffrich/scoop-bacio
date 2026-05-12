@@ -1,0 +1,27 @@
+{
+  "version": "1.0.3",
+  "description": "Local-first issue tracker for AI agents, with CLI and TUI",
+  "homepage": "https://github.com/mrgeoffrich/bacio",
+  "license": "MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/mrgeoffrich/bacio/releases/download/v1.0.3/bacio-v1.0.3-windows-amd64.zip",
+      "hash": "ebcd61a87b2211a5de4b29940a342c14370ffc16220dc10ae6ac4b6048a20cf3",
+      "extract_dir": "bacio-v1.0.3-windows-amd64"
+    }
+  },
+  "bin": "bacio.exe",
+  "checkver": "github",
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/mrgeoffrich/bacio/releases/download/v$version/bacio-v$version-windows-amd64.zip",
+        "extract_dir": "bacio-v$version-windows-amd64"
+      }
+    },
+    "hash": {
+      "url": "https://github.com/mrgeoffrich/bacio/releases/download/v$version/checksums.txt",
+      "regex": "([a-fA-F0-9]{64})\\s+$basename"
+    }
+  }
+}
